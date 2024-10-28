@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: black; /* Background color for full page */
+}
+
+.container {
+    width: 20%; /* Adjust width as needed */
+    max-width: 800px; /* Optional max width */
+    margin: 0 auto; /* Center the container */
+    background-color: white; /* Background color for content area */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+    border-radius: 10px; /* Optional rounded corners */
+}
