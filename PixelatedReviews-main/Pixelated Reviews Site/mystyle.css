@@ -3,6 +3,7 @@
 }
 
 body {
+  z-index: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(to right, #a5a6cc, #b6b5d0);
@@ -14,12 +15,12 @@ body {
   height: 100%;
   width: 200px;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  margin-top: 76px; /* Add margin to lower the sidebar */
+  margin-top: 4%; /* Add margin to lower the sidebar */
   padding: 10px;
 }
 
@@ -55,10 +56,18 @@ img {
   margin-left: 350px;
   margin-top: 50px;
   padding-left: 20px;
+  z-index: auto;
   margin-right: 50px;
   flex-grow: 1;
   padding: 70px 20px 20px; /* Add padding-top to create space below the topnav */
 }
+
+.LoginPage {
+  padding: 30px;
+  width: 30%;
+  margin: auto; /* Centers the container horizontally */
+}
+
 .container {
   padding: 30px;
   width: 500px;
@@ -170,12 +179,11 @@ a:visited {
   height: 100%;
   width: 300px;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 0;
   right: 0;
   overflow-x: hidden;
   margin-right: 200px;
-  margin-top: 100px; /* Increase this value to lower the Recent Posts section */
+  margin-top: 0%; /* Increase this value to lower the Recent Posts section */
   margin-bottom: 20px;
 }
 .ThreadList {
@@ -189,40 +197,108 @@ a:visited {
   text-decoration: underline;
   margin: 10px 0; /* Space between list items */
 }
- /* Add styles for the top nav bar */
+
+ /* TOP NAV STUFF */
  .topnav {
   background-color: #333;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px; /* Set a fixed height */
   position: fixed; /* Fix the position to the top */
   top: 0; /* Align to the top of the viewport */
   width: 100%; /* Make it full width */
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1; /* Ensure it stays above other content */
   padding: 10px;
-  height: 76px;
+  height: 8.5%;
 }
 .topnav h1 {
   color: white;
   margin: 0;
   font-size: 24px;
+  margin-right: 70%;
 }
+
+/* Search stuff */
 .search-container {
-  flex-grow: 1;
-  text-align: center;
+  position: relative;
+  width: 30%; /* Adjust width as needed */
+  margin: 20px auto; /* Center the container */
+  z-index: 500;
+  margin-right: 40%;
+  margin-top: 0.5%;
+  display: flex;
+  align-items: center;
 }
-.search-container input[type="text"] {
-  width: 40%; /* Horizontal width of the search bar */
-  padding: 10px;
+
+input[type=text] {
+  background-color: #5d5e5f;
+  width: 100%;
+}
+
+.icon-container {
+  margin-right: 10px; /* Space between the icon and input */
+}
+
+.search-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  position: absolute;
+  z-index: 501;
+  margin-left: 5%;
+}
+
+.search {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
   font-size: 16px;
-  border-radius: 20px; /* Make the corners round */
-  margin-right: 700px; /* Add margin to shift left */
+  text-align:unset;
+  text-indent: 7%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.search:focus {
+  border-color: #007BFF; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%; /* Position below the input */
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure suggestions are above other elements */
+  display: none; /* Hide suggestions by default */
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #f0f0f0; /* Highlight suggestion on hover */
+  border-radius: 20px; /* Make the input field rounder */
+}
+
+.search-container:hover .suggestions {
+  display: block; /* Show suggestions on hover of container */
+}
+
+/* Optional: Display suggestions on input focus */
+.search:focus + .suggestions {
+  display: block;
+}
+
+
 .logo { /* For Logos */
   display: block;
-  margin: 25px auto; /* Centers the logo and adds space above/below */
+  margin: auto; /* Centers the logo and adds space above/below */
   width: 50%; /* Set to 100% of the parent container */
   height: auto; /* Maintain aspect ratio */
 }
@@ -231,4 +307,28 @@ a:visited {
   margin-right: 10px; /* Space between logo and text */
   vertical-align: middle; /* Align with text vertically */
 }
+.profile-container {
+  margin-right: 5%; /* Pushes the profile image to the right */
+}
+.profile-img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it circular */
+}
 
+/* Login Specific */
+.login-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-right: 5%;
+}
+
+.login-img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.login-text {
+  font-size: 24px; /* Adjust font size as needed */
+}
