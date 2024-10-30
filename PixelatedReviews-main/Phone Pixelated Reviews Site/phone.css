@@ -6,6 +6,7 @@ body, html {
 
 body {
     background-color: black; /* Background color for full page */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .container {
@@ -16,4 +17,32 @@ body {
     padding: 20px; /* Padding around the content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
     border-radius: 10px; /* Optional rounded corners */
+    height: 100%;
+}
+
+.white-text {
+    color: white;
+}
+
+
+/* -------SWIPE STUFF------- */
+.swipe {
+    position:absolute; /* Position the element absolutely */
+    top: 0px; /* Distance from the top */
+    right: 5%; /* Distance from the right */
+    padding: 0px; /* Some padding */
+    border: 1px solid white; /* Border for visibility */
+    text-align: center;
+}
+
+.swipecontainer {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.swipepng {
+    margin: 0 10px; /* Space between images */
+    cursor: pointer; /* Change cursor to indicate interactivity */
 }
