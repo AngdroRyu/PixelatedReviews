@@ -6,22 +6,25 @@
     <link rel="stylesheet" href="phone.css">
     <title>Centered Content</title>
 </head>
+
+<script src="script.js"></script>
+
 <body>
     <div class="mainphonecontainer">
         <div class="title">
-            <h1>Login / Sign Up</h1>
+            <!-- Was a title idk -->
         </div>
 
         <div class="logincontainer">
+            <h1>Login / Sign Up</h1>
             <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required required style="background-color: white;"/>
+            
             <div class="input-container">
                 <input type="password" id="password" placeholder="Enter Password" name="password" required />
-                <img src="VisabilityOff.png" alt="Visibility Off" class="visibility-icon" /> <!-- Visibility Icon Image -->
-            </div>
+                <img src="VisibilityOff.png" id="toggle-icon" alt="Visibility Off" class="visibility-icon"/><!-- Visibility Icon Image -->
+            </div>  
             
-            
-
             <button type="submit">Login</button>
             <a href="#" class="forgot-password">Forgot Password?</a>
 
@@ -44,7 +47,5 @@
             </a>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
