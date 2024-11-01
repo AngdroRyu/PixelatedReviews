@@ -54,12 +54,20 @@ img {
 /* Style the content */
 .content {
   margin-left: 350px;
-  margin-top: 50px;
+  margin-top: 20px;
   padding-left: 20px;
   z-index: auto;
   margin-right: 50px;
   flex-grow: 1;
-  padding: 70px 20px 20px; /* Add padding-top to create space below the topnav */
+  padding: 50px 20px 20px; /* Add padding-top to create space below the topnav */
+}
+
+.content h1 {
+  border-bottom: 3px solid black; /* Adds underline */
+  padding-bottom: 5px; /* Spacing below the underline */
+  text-align: center; /* Centers the heading */
+  font-size: 24px; /* Adjust this size as desired */
+  margin-right: 350px;
 }
 
 .LoginPage {
@@ -98,6 +106,7 @@ button {
   width: 80%; /* Control the width of the panel */
 }
 .Game {
+  position: relative;
   box-sizing: border-box;
   border: 1px solid black;
   display: inline-block;
@@ -176,15 +185,17 @@ a:visited {
   width: 30%;
 }
 .Threads {
-  height: 100%;
   width: 300px;
   position: fixed;
   z-index: 0;
   right: 0;
+  margin-top: 20px; /* Increase this value to lower the Recent Posts section */
+
+  padding: 20px; /* Add padding inside the box */
+  border-radius: 8px; /* Rounds the corners slightly */
+  background-color: #a5a6cc; /* Adds a light background color */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Optional shadow for a lifted effect */
   overflow-x: hidden;
-  margin-right: 200px;
-  margin-top: 0%; /* Increase this value to lower the Recent Posts section */
-  margin-bottom: 20px;
 }
 .ThreadList {
   /* padding-left: 0; No left padding to align with header. Problem is this is removing the bullet points */
