@@ -14,39 +14,16 @@ body {
     max-width: 800px; /* Optional max width */
     margin: 0 auto; /* Center the container */
     background-color: white; /* Background color for content area */
-    padding: 20px; /* Padding around the content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
     border-radius: 10px; /* Optional rounded corners */
-    height: 95%;
+    height: 90%;
+    position: relative; /* Add this to position child elements absolutely */
+    top: 3%;
 }
 
 .white-text {
     color: white;
 }
-
-
-/*--------------------SWIPE--------------------*/
-.swipe {
-    position:absolute; /* Position the element absolutely */
-    top: 0px; /* Distance from the top */
-    right: 5%; /* Distance from the right */
-    padding: 0px; /* Some padding */
-    border: 1px solid white; /* Border for visibility */
-    text-align: center;
-}
-
-.swipecontainer {
-    display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Center the images vertically */
-    overflow: hidden; /* Hide any overflow */
-}
-
-.swipepng {
-    margin: 0 10px; /* Space between images */
-    cursor: pointer; /* Change cursor to indicate interactivity */
-}
-/*--------------------------------------------------*/
 
 /*--------------------LOGIN--------------------*/
 .logincontainer {
@@ -54,7 +31,7 @@ body {
     padding: 30px; /* Padding around the form */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    width: 300px; /* Fixed width for the form */
+    width: 80%; /* Fixed width for the form */
 }
 
 label {
@@ -161,7 +138,133 @@ button:hover {
     position: relative; /* Position for icon */
 }
 
+.logintitle {
+    text-align: center;
+    color: black;
+}
+
 .google-button img {
-    width: 24px; /* Width of the icon */
+    width: 40px; /* Width of the icon */
+}
+
+.signup-prompt {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space above the prompt */
+}
+
+.signup-link {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.signup-link:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 /*--------------------------------------------------*/
+
+/*--------------------PHONE-RESOURCES--------------------*/
+.phoneresources {
+    width: 100%; /* Full width of the container */
+    background-color: #333; /* Dark background for the topnav */
+    color: white; /* Text color */
+    border-radius: 10px 10px 0 0; /* Rounded corners only on the top */
+    padding: 10px; /* Padding for the topnav */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.status-icons {
+    display: flex; /* Flexbox for status icons */
+    align-items: center; /* Center icons vertically */
+}
+
+.time {
+    margin-right: auto; /* Pushes the time to the left */
+}
+
+.status-icons span {
+    margin-left: 10px; /* Space between icons */
+}
+
+.wifi-icon, .signal-icon, .battery-icon {
+    font-size: 16px; /* Icon size */
+}
+
+.other-icons {
+    display: flex; /* Flexbox for icons */
+    gap: 10px; /* Space between the icons */
+    align-items: center; /* Center the icons vertically */
+}
+
+.time {
+    font-size: 16px; /* Time size */
+}
+
+/*--------------------------------------------------*/
+
+/*--------------------Favorites--------------------*/
+.custom-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px; /* Customize font size */
+    color: #333; /* Customize color */
+}
+
+.favorites-menu {
+    margin-top: 20px;
+    padding: 10px; /* Added padding */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0; /* Padding for spacing */
+    border-bottom: 1px solid #ddd; /* Line between items */
+}
+
+.favorite-item:last-child {
+    border-bottom: none; /* Remove line for last item */
+}
+
+.game-number {
+    margin-right: 10px; /* Space between number and image */
+    font-weight: bold; /* Make the number bold */
+}
+
+.game-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 25px;
+    margin-left: 3%;
+}
+
+.game-info {
+    flex-grow: 1;
+}
+
+.game-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.genre {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.creator {
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px; /* Adjusted margin */
+    white-space: nowrap; /* Prevent line breaks */
+    margin-right: 10%;
+}

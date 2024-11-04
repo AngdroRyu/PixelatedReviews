@@ -6,45 +6,45 @@
     <link rel="stylesheet" href="phone.css">
     <title>Centered Content</title>
 </head>
+
 <body>
     <div class="mainphonecontainer">
-        <div class="title">
-            <h1>Login / Sign Up</h1>
+        <div class="phoneresources">
+            <span class="time">12:45</span>
+        <div class="other-icons">
+            <span class="wifi-icon">🌐</span>
+            <span class="signal-icon">📶</span>
+            <span class="battery-icon">🔋 75%</span>
+        </div>
+        </div>
+
+        <div class="logintitle">
+            <h1>Login</h1>
         </div>
 
         <div class="logincontainer">
             <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required required style="background-color: white;"/>
-            <div class="input-container">
-                <input type="password" id="password" placeholder="Enter Password" name="password" required />
-                <img src="VisabilityOff.png" alt="Visibility Off" class="visibility-icon" /> <!-- Visibility Icon Image -->
-            </div>
+           
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required />
             
-            
-
+            <a href="Library.html">
             <button type="submit">Login</button>
+            </a>
+            
             <a href="#" class="forgot-password">Forgot Password?</a>
 
             <div class="divider">Or continue with</div>
-        
+            
             <button class="google-button">
-            <img src="GoogleIcon.webp" alt="Google Icon" />
+            <img src="GoogleIcon.webp" alt="Google Icon"/></button>
+            
+            <div class="signup-prompt">
+                <p>Don't have an account? <a href="#" class="signup-link">Sign up!</a></p>
+            </div>
         </div>
       
     </div>
-
-    <div class="swipe">
-        <h1 class="white-text">Swipe</h1>
-        <div class="swipecontainer">
-            <a href="Index.html">
-            <img src="SwipeLeft.png" alt="SwipeLeft" class="swipepng" />
-            </a>
-            <a href="Login.html">
-            <img src="SwipeRight.png" alt="SwipeRight" class="swipepng" />
-            </a>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
