@@ -208,7 +208,8 @@ button:hover {
 /*--------------------Favorites--------------------*/
 .custom-title {
     text-align: center;
-    margin: 20px 0;
+    margin-top: 60px; /* Increase this value to push the title further down */
+    margin-bottom: 20px; /* Keep the gap below the title */
     font-size: 24px; /* Customize font size */
     color: #333; /* Customize color */
 }
@@ -216,9 +217,11 @@ button:hover {
 .favorites-menu {
     margin-top: 20px;
     padding: 10px; /* Added padding */
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #726e6e7c; /* Light background color */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    display: flex;
+    flex-direction: column; /* Stack the favorite items vertically */
 }
 
 .favorite-item {
@@ -227,6 +230,7 @@ button:hover {
     margin-bottom: 15px;
     padding: 10px 0; /* Padding for spacing */
     border-bottom: 1px solid #ddd; /* Line between items */
+    position: relative; /* Allow for absolute positioning of child elements */
 }
 
 .favorite-item:last-child {
@@ -242,23 +246,30 @@ button:hover {
     width: 80px;
     height: 80px;
     border-radius: 5px;
-    margin-right: 25px;
-    margin-left: 3%;
+    margin-right: 15px;
+    margin-left: 1px;
 }
 
 .game-info {
     flex-grow: 1;
+    margin-right: 20px; /* Add some space to the right */
 }
 
 .game-title {
     margin: 0;
     font-size: 16px;
+    white-space: nowrap; /* Prevent title from wrapping to a new line */
+    overflow: hidden; /* Prevent overflow if text is too long */
+    text-overflow: ellipsis; /* Optional: adds ellipsis if title is too long */
 }
 
 .genre {
     margin: 0;
     font-size: 14px;
     color: #666;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Prevent overflow if text is too long */
+    text-overflow: ellipsis; /* Optional: adds ellipsis if genre is too long */
 }
 
 .creator {
@@ -266,5 +277,80 @@ button:hover {
     color: #666;
     margin-left: 5px; /* Adjusted margin */
     white-space: nowrap; /* Prevent line breaks */
-    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1; /* Allow it to shrink if needed */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    max-width: 100%; /* Optional: Adjust to prevent overflow and keep layout tight */
+}
+
+.dots-icon {
+    width: 30px; /* Increase the size of the dots */
+    height: auto; /* Keep aspect ratio */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    margin-left: 5px; /* Push the dots to the right */
+    flex-shrink: 0; /* Prevent dots from shrinking */
+}
+
+/*------------------TOP RIGHT ICONS SECTION------------------*/
+.top-right-icons {
+    position: absolute;
+    top: 50px; /* Adjust to position it below the phoneresources */
+    right: 10px;
+    display: flex;
+    gap: 20px; /* Space between the icons */
+    align-items: center; /* Vertically align the icons */
+}
+
+.magnify-icon, .profile-icon {
+    width: 24px; /* Adjust size of the images */
+    height: 24px; /* Maintain aspect ratio or adjust as needed */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.profile-icon {
+    border-radius: 50%; /* Makes the profile image round */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/*------------------Bottom Navigation Bar------------------*/
+.bottom-nav {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true centering */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust width of the nav bar */
+    padding: 10px;
+    background-color: #777272; /* White background for the nav */
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    box-sizing: border-box;
+}
+
+/* Common style for nav icons */
+.nav-icon {
+    width: 40px; /* Set width of icons */
+    height: 40px; /* Set height to match width */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Home Icon (left-middle) */
+.home-icon {
+    margin-right: auto; /* Push home icon to the left */
+}
+
+/* Add (+) Button (bottom-middle) */
+.plus-icon {
+    margin-left: auto;
+    margin-right: auto; /* Center the + icon */
+    display: block;
+}
+
+/* Bell Icon (right-middle) */
+.bell-icon {
+    margin-left: auto; /* Push bell icon to the right */
 }
