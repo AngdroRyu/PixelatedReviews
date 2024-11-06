@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-    background-color: black; /* Background color for full page */
+    background-color: white; /* Background color for full page */
     overflow: hidden; /* Prevent scrolling */
 }
 
@@ -13,7 +13,7 @@ body {
     width: 20%; /* Adjust width as needed */
     max-width: 800px; /* Optional max width */
     margin: 0 auto; /* Center the container */
-    background-color: white; /* Background color for content area */
+    background-color: black; /* Background color for content area */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
     border-radius: 10px; /* Optional rounded corners */
     height: 90%;
@@ -211,7 +211,7 @@ button:hover {
     margin-top: 60px; /* Increase this value to push the title further down */
     margin-bottom: 20px; /* Keep the gap below the title */
     font-size: 24px; /* Customize font size */
-    color: #333; /* Customize color */
+    color: white; /* Customize color */
 }
 
 .favorites-menu {
@@ -353,4 +353,114 @@ button:hover {
 /* Bell Icon (right-middle) */
 .bell-icon {
     margin-left: auto; /* Push bell icon to the right */
+}
+
+/*----------------------------------------------------------------*/
+/*------------------TOP RIGHT ICONS SECTION------------------*/
+.top-right-icons {
+    position: absolute;
+    top: 50px; /* Adjust to position it below the phoneresources */
+    right: 10px;
+    display: flex;
+    gap: 20px; /* Space between the icons */
+    align-items: center; /* Vertically align the icons */
+}
+.magnify-icon, .profile-icon {
+    width: 24px; /* Adjust size of the images */
+    height: 24px; /* Maintain aspect ratio or adjust as needed */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+.profile-icon {
+    border-radius: 50%; /* Makes the profile image round */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/*------------------TOP LEFT SECTION------------------*/
+.top-left {
+    position: absolute;
+    top: 50px; /* Adjust the vertical position */
+    left: 20px; /* Adjust horizontal distance from the left edge */
+    display: flex;
+    align-items: center; /* Vertically align text and icon */
+    gap: 8px; /* Space between text and arrow icon */
+}
+
+.site-name {
+    font-size: 20px; /* Adjust font size */
+    font-weight: bold;
+    color: white; /* Adjust text color */
+    cursor: pointer;
+}
+
+.arrow-icon {
+    width: 16px; /* Adjust size of the arrow icon */
+    height: 16px;
+    cursor: pointer;
+}
+/*------------------Search Bar Container------------------*/
+.search-bar-container-for-library {
+    display:flex; /* Use flexbox to align items */
+    align-items: flex-start;
+    justify-content: space-between; /* Space between search and sort button */
+    width: 90%; /* Make sure it's almost full width */
+    margin: 0 auto; /* Center the container */
+    margin-top: 120px; /* Move the search bar further down */
+}
+
+/* Search Input Field */
+.search-input {
+    flex-grow: 1; /* Allow the input field to grow to take up available space */
+    width: 0; /* Set width to 0, allowing flex-grow to control its width */
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    font-size: 16px; /* Font size */
+    background-color: #858484; /* Light background */
+    outline: none; /* Remove outline */
+    height: 35px; /* Set a fixed height for the input */
+    box-sizing: border-box; /* Include padding and borders in the height */
+}
+
+/* Sort Button */
+.sort-button {
+    background-color: gray; /* Gray background */
+    width: auto; /* Let the width adjust based on the content */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    margin-left: 10px; /* Space between the search bar and sort button */
+    height: 35px; /* Set the same height as the input */
+    box-sizing: border-box; /* Include padding and borders in the height */
+}
+
+.sort-button:hover {
+    background-color: rgb(99, 98, 98); /* Darker gray on hover */
+}
+
+/* Search Icon (Magnifying Glass) */
+.search-icon {
+    width: 20px; /* Icon size */
+    height: 20px; /* Maintain aspect ratio */
+    margin-right: 30px; /* Pull icon to the right side of the input */
+    cursor: pointer; /* Show pointer cursor on hover */
+    z-index: 5;
+}
+
+/*------------------ADD GAME PROMPT SECTION------------------*/
+.add-game-prompt {
+    margin-top: 20px; /* Space between favorites and the new prompt */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Adjust font size */
+    color: white; /* Text color */
+}
+
+.add-game-prompt a {
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.add-game-prompt a:hover {
+    text-decoration: underline; /* Underline the link on hover */
 }
