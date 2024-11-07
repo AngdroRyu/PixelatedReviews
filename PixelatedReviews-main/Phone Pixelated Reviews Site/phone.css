@@ -4,6 +4,11 @@ body, html {
     height: 100%;
 }
 
+h2, a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color of the h2 */
+}
+
 body {
     background-color: white; /* Background color for full page */
     overflow: hidden; /* Prevent scrolling */
@@ -19,6 +24,20 @@ body {
     height: 90%;
     position: relative; /* Add this to position child elements absolutely */
     top: 3%;
+}
+
+.mainphonecontainer-diff {
+    width: 20%; /* Adjust width as needed */
+    max-width: 800px; /* Optional max width */
+    margin: 0 auto; /* Center the container */
+    background-color: black; /* Background color for content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+    border-radius: 10px; /* Optional rounded corners */
+    height: 90%;
+    position: relative; /* Add this to position child elements absolutely */
+    top: 3%;
+    min-height: 100%;
+    overflow: auto;
 }
 
 .white-text {
@@ -254,6 +273,7 @@ button:hover {
 .game-info {
     flex-grow: 1;
     margin-right: 20px; /* Add some space to the right */
+    
 }
 
 .game-title {
@@ -263,6 +283,8 @@ button:hover {
     overflow: hidden; /* Prevent overflow if text is too long */
     text-overflow: ellipsis; /* Optional: adds ellipsis if title is too long */
     cursor: pointer;
+    text-decoration: none;  /* Remove the underline, if you want */
+    
 }
 
 .genre {
@@ -318,19 +340,20 @@ button:hover {
 
 /*------------------Bottom Navigation Bar------------------*/
 .bottom-nav {
-    position: absolute;
-    bottom: 0; /* Position at the bottom of the container */
+    position: fixed; /* Fix the nav at the bottom of the page */
+    bottom: 0; /* Position at the bottom of the viewport */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for true centering */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Evenly space items */
     align-items: center;
-    width: 80%; /* Adjust width of the nav bar */
+    width: 400px; /* Adjust width of the nav bar */
     padding: 10px;
-    background-color: #777272; /* White background for the nav */
+    background-color: #777272; /* Background color */
     border-radius: 15px 15px 0 0; /* Rounded top corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
     box-sizing: border-box;
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 /* Common style for nav icons */
@@ -338,35 +361,22 @@ button:hover {
     width: 40px; /* Set width of icons */
     height: 40px; /* Set height to match width */
     cursor: pointer; /* Change cursor on hover */
-}
-
-/* Home Icon (left-middle) */
-.home-icon {
-    margin-left: auto;
-    margin-right: auto; /* Center the + icon */
     display: block;
 }
 
-/* Add (+) Button (bottom-middle) */
-.plus-icon {
-    margin-left: auto;
-    margin-right: auto; /* Center the + icon */
-    display: block;
+/* Remove individual icon margins */
+.home-icon, .plus-icon, .bell-icon {
+    margin: 0;
 }
 
-/* Bell Icon (right-middle) */
-.bell-icon {
-    margin-left: auto;
-    margin-right: auto; /* Center the + icon */
-    display: block;
-}
-
-.nav-icon {
-    margin-left: auto;
-    margin-right: auto; /* Center the + icon */
-    display: block;
+/* Add this if you want to make sure each <a> tag behaves as a flex item */
+.bottom-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*----------------------------------------------------------------*/
+
 /*------------------TOP RIGHT ICONS SECTION------------------*/
 .top-right-icons {
     position: absolute;
@@ -394,19 +404,23 @@ button:hover {
     display: flex;
     align-items: center; /* Vertically align text and icon */
     gap: 8px; /* Space between text and arrow icon */
+    text-decoration: none;
 }
 
 .site-name {
+    text-decoration: none;
     font-size: 20px; /* Adjust font size */
     font-weight: bold;
     color: white; /* Adjust text color */
     cursor: pointer;
+    
 }
 
 .arrow-icon {
     width: 16px; /* Adjust size of the arrow icon */
     height: 16px;
     cursor: pointer;
+    text-decoration: none;
 }
 /*------------------Search Bar Container------------------*/
 .search-bar-container-for-library {
@@ -475,3 +489,80 @@ button:hover {
 .add-game-prompt a:hover {
     text-decoration: underline; /* Underline the link on hover */
 }
+
+/*--------------------For Add Game Page--------------------*/
+.buttonimg {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+    color: white;
+}
+
+.button_addgame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.replybutton {
+    background-color: #6d04aa;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    color: white;
+}
+
+.Replying {
+    margin-left: 10%;
+    width: 90%;
+    height: auto;
+    display: table;
+    padding: 10px;
+    vertical-align: middle;
+    color: white;
+  }
+  
+  #voting {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 12px;
+    padding-left: 250px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .upvote {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .downvote {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .white-text {
+    color: white;
+  }
+
+  .Review {
+    color: white;
+  }
+  
+  .ReplyingComment {
+    color: white;
+  }
+
+  .plus-icon-diff {
+    width: 15%;
+    height: 15%;
+    cursor: pointer;
+  }
