@@ -47,8 +47,11 @@ img {
 
 /* Change color on hover */
 .sidenav a:hover {
-  background-color: #ddd;
+  background-color: #5e5e5e93;
   color: black;
+}
+.sidenav a:visited {
+  color: white;
 }
 
 /* Style the content */
@@ -85,12 +88,16 @@ img {
 /* Full-width inputs */
 input[type="text"],
 input[type="password"] {
+  background-color: #5d5e5f;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+::placeholder {
+  color: white;
 }
 
 .button {
@@ -395,4 +402,22 @@ input[type="text"] {
   padding-right: 10px;
   vertical-align: middle;
   padding-top: 10px;
+}
+a:visited {
+  color: white;
+}
+.TextReview {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  background-color: #5d5e5f;
+}
+TextReviewDiv {
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
