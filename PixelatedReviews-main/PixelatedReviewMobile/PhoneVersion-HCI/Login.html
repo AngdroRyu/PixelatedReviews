@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="phone.css" />
+    <title>Centered Content</title>
+  </head>
+
+  <body>
+    <div class="mainphonecontainer">
+      <div class="phoneresources">
+        <span class="time">12:45</span>
+        <div class="other-icons">
+          <span class="wifi-icon">🌐</span>
+          <span class="signal-icon">📶</span>
+          <span class="battery-icon">🔋 75%</span>
+        </div>
+      </div>
+
+      <div class="logintitle">
+        <h1>Login</h1>
+      </div>
+
+      <div class="logincontainer">
+        <label for="username"><b>Username</b></label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+          required
+        />
+
+        <label for="password"><b>Password</b></label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+        />
+
+        <a href="Library.html">
+          <button type="submit">Login</button>
+        </a>
+
+        <a href="#" class="forgot-password">Forgot Password?</a>
+
+        <div class="divider">Or continue with</div>
+
+        <button class="google-button">
+          <img src="GoogleIcon.webp" alt="Google Icon" />
+        </button>
+
+        <div class="signup-prompt">
+          <p>
+            Don't have an account? <a href="#" class="signup-link">Sign up!</a>
+          </p>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <a href="MostPopular.html">
+          <img
+            src="Exclamation.png"
+            alt="Popular"
+            class="nav-icon popular-icon"
+          />
+        </a>
+
+        <a href="Library.html">
+          <img src="HomeIcon.png" alt="Home" class="nav-icon home-icon" />
+        </a>
+
+        <a href="AddGame.html">
+          <img src="PlusIcon.png" alt="Add" class="nav-icon plus-icon" />
+        </a>
+
+        <img src="BellIcon.png" alt="Inbox" class="nav-icon bell-icon" />
+      </div>
+    </div>
+  </body>
+</html>

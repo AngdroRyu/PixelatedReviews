@@ -1,0 +1,589 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h2,
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the color of the h2 */
+}
+
+body {
+  background-color: white; /* Background color for full page */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.mainphonecontainer {
+  width: 25%; /* Adjust width as needed */
+  max-width: 1000px; /* Optional max width */
+  margin: 0 auto; /* Center the container */
+  background-color: black; /* Background color for content area */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+  border-radius: 10px; /* Optional rounded corners */
+  height: 90%;
+  position: relative; /* Add this to position child elements absolutely */
+  top: 3%;
+}
+
+.mainphonecontainer-diff {
+  width: 25%; /* Adjust width as needed */
+  max-width: 1000px; /* Optional max width */
+  margin: 0 auto; /* Center the container */
+  background-color: black; /* Background color for content area */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+  border-radius: 10px; /* Optional rounded corners */
+  height: 90%;
+  position: relative; /* Add this to position child elements absolutely */
+  top: 3%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+.white-text {
+  color: white;
+}
+
+/*--------------------LOGIN--------------------*/
+.logincontainer {
+  background-color: white; /* White background for the form */
+  padding: 30px; /* Padding around the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 80%; /* Fixed width for the form */
+}
+
+label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 5px; /* Space below labels */
+  display: block; /* Make labels block elements */
+}
+
+.input-container {
+  position: relative; /* For positioning the icon */
+  width: 100%; /* Full width */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside inputs */
+  margin: 10px 0; /* Space above and below inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners for inputs */
+  box-sizing: border-box; /* Include padding and border in width */
+  font-size: 16px; /* Font size for inputs */
+  background-color: #5d5e5f;
+  color: white;
+}
+
+.visibility-icon {
+  position: absolute; /* Position the icon */
+  right: 10px; /* Position to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 24px; /* Width of the icon */
+  height: auto; /* Maintain aspect ratio */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+  background-color: #5d5e5f;
+  color: white;
+}
+
+button {
+  background-color: #007bff; /* Blue button background */
+  color: white; /* White text on button */
+  border: none; /* No border */
+  padding: 10px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for button */
+  width: 100%; /* Full width button */
+  margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.forgot-password {
+  display: block; /* Display as a block for spacing */
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Space above the link */
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.forgot-password:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.divider {
+  margin: 20px 0; /* Space above and below the divider */
+  position: flex; /* Position relative for pseudo-elements */
+  text-align: center; /* Center the text */
+}
+
+.divider::before,
+.divider::after {
+  content: ""; /* Empty content for the lines */
+  flex: 1; /* Grow to fill available space */
+  width: 45%; /* Width of the lines */
+  height: 1px; /* Line height */
+  background-color: #ccc; /* Line color */
+  vertical-align: middle; /* Align with text */
+}
+
+.divider::before {
+  margin-right: 10px; /* Space between line and text */
+}
+
+.divider::after {
+  margin-left: 10px; /* Space between line and text */
+}
+
+.google-button {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center icon and text */
+  justify-content: center; /* Center the button content */
+  background-color: black; /* Google red */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 0; /* No padding */
+  border-radius: 50%; /* Circular button */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  margin: 10px auto; /* Center button with auto margins */
+  position: relative; /* Position for icon */
+}
+
+.logintitle {
+  text-align: center;
+  color: black;
+}
+
+.google-button img {
+  width: 40px; /* Width of the icon */
+}
+
+.signup-prompt {
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Space above the prompt */
+}
+
+.signup-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.signup-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/*--------------------------------------------------*/
+
+/*--------------------PHONE-RESOURCES--------------------*/
+.phoneresources {
+  width: 100%; /* Full width of the container */
+  background-color: #333; /* Dark background for the topnav */
+  color: white; /* Text color */
+  border-radius: 10px 10px 0 0; /* Rounded corners only on the top */
+  padding: 10px; /* Padding for the topnav */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  margin: 0; /* Remove default margin */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.status-icons {
+  display: flex; /* Flexbox for status icons */
+  align-items: center; /* Center icons vertically */
+}
+
+.time {
+  margin-right: auto; /* Pushes the time to the left */
+}
+
+.status-icons span {
+  margin-left: 10px; /* Space between icons */
+}
+
+.wifi-icon,
+.signal-icon,
+.battery-icon {
+  font-size: 16px; /* Icon size */
+}
+
+.other-icons {
+  display: flex; /* Flexbox for icons */
+  gap: 10px; /* Space between the icons */
+  align-items: center; /* Center the icons vertically */
+}
+
+.time {
+  font-size: 16px; /* Time size */
+}
+
+/*--------------------------------------------------*/
+
+/*--------------------Favorites--------------------*/
+.custom-title {
+  text-align: center;
+  margin-top: 60px; /* Increase this value to push the title further down */
+  margin-bottom: 20px; /* Keep the gap below the title */
+  font-size: 24px; /* Customize font size */
+  color: white; /* Customize color */
+}
+
+.favorites-menu {
+  margin-top: 20px;
+  padding: 10px; /* Added padding */
+  background-color: #726e6e7c; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+  display: flex;
+  flex-direction: column; /* Stack the favorite items vertically */
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0; /* Padding for spacing */
+  border-bottom: 1px solid #ddd; /* Line between items */
+  position: relative; /* Allow for absolute positioning of child elements */
+}
+
+.favorite-item:last-child {
+  border-bottom: none; /* Remove line for last item */
+}
+
+.game-number {
+  margin-right: 10px; /* Space between number and image */
+  font-weight: bold; /* Make the number bold */
+}
+
+.game-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+.game-info {
+  flex-grow: 1;
+  margin-right: 20px; /* Add some space to the right */
+  color: white;
+}
+.genre {
+  color: white;
+}
+.creator {
+  color: white;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 16px;
+  white-space: nowrap; /* Prevent title from wrapping to a new line */
+  overflow: hidden; /* Prevent overflow if text is too long */
+  text-overflow: ellipsis; /* Optional: adds ellipsis if title is too long */
+  cursor: pointer;
+  text-decoration: none; /* Remove the underline, if you want */
+}
+
+.genre {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Prevent overflow if text is too long */
+  text-overflow: ellipsis; /* Optional: adds ellipsis if genre is too long */
+}
+
+.creator {
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px; /* Adjusted margin */
+  white-space: nowrap; /* Prevent line breaks */
+  display: flex;
+  align-items: center;
+  flex-shrink: 1; /* Allow it to shrink if needed */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+  max-width: 100%; /* Optional: Adjust to prevent overflow and keep layout tight */
+}
+
+.dots-icon {
+  width: 30px; /* Increase the size of the dots */
+  height: auto; /* Keep aspect ratio */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  margin-left: 5px; /* Push the dots to the right */
+  flex-shrink: 0; /* Prevent dots from shrinking */
+}
+
+/*------------------TOP RIGHT ICONS SECTION------------------*/
+.top-right-icons {
+  position: absolute;
+  top: 50px; /* Adjust to position it below the phoneresources */
+  right: 10px;
+  display: flex;
+  gap: 20px; /* Space between the icons */
+  align-items: center; /* Vertically align the icons */
+}
+
+.magnify-icon,
+.profile-icon {
+  width: 24px; /* Adjust size of the images */
+  height: 24px; /* Maintain aspect ratio or adjust as needed */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.profile-icon {
+  border-radius: 50%; /* Makes the profile image round */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/*------------------Bottom Navigation Bar------------------*/
+.bottom-nav {
+  position: fixed; /* Fix the nav at the bottom of the page */
+  bottom: 0; /* Position at the bottom of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true centering */
+  display: flex;
+  justify-content: space-evenly; /* Evenly space items */
+  align-items: center;
+  width: 400px; /* Adjust width of the nav bar */
+  padding: 10px;
+  background-color: #777272; /* Background color */
+  border-radius: 15px 15px 0 0; /* Rounded top corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Common style for nav icons */
+.nav-icon {
+  width: 40px; /* Set width of icons */
+  height: 40px; /* Set height to match width */
+  cursor: pointer; /* Change cursor on hover */
+  display: block;
+}
+
+/* Remove individual icon margins */
+.home-icon,
+.plus-icon,
+.bell-icon {
+  margin: 0;
+}
+
+/* Add this if you want to make sure each <a> tag behaves as a flex item */
+.bottom-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*----------------------------------------------------------------*/
+
+/*------------------TOP RIGHT ICONS SECTION------------------*/
+.top-right-icons {
+  position: absolute;
+  top: 50px; /* Adjust to position it below the phoneresources */
+  right: 10px;
+  display: flex;
+  gap: 20px; /* Space between the icons */
+  align-items: center; /* Vertically align the icons */
+}
+.magnify-icon,
+.profile-icon {
+  width: 24px; /* Adjust size of the images */
+  height: 24px; /* Maintain aspect ratio or adjust as needed */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+.profile-icon {
+  border-radius: 50%; /* Makes the profile image round */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/*------------------TOP LEFT SECTION------------------*/
+.top-left {
+  position: absolute;
+  top: 50px; /* Adjust the vertical position */
+  left: 20px; /* Adjust horizontal distance from the left edge */
+  display: flex;
+  align-items: center; /* Vertically align text and icon */
+  gap: 8px; /* Space between text and arrow icon */
+  text-decoration: none;
+}
+
+.site-name {
+  text-decoration: none;
+  font-size: 20px; /* Adjust font size */
+  font-weight: bold;
+  color: white; /* Adjust text color */
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 16px; /* Adjust size of the arrow icon */
+  height: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/*------------------Search Bar Container------------------*/
+.search-bar-container-for-library {
+  display: flex; /* Use flexbox to align items */
+  align-items: flex-start;
+  justify-content: space-between; /* Space between search and sort button */
+  width: 90%; /* Make sure it's almost full width */
+  margin: 0 auto; /* Center the container */
+  margin-top: 120px; /* Move the search bar further down */
+}
+
+/* Search Input Field */
+.search-input {
+  flex-grow: 1; /* Allow the input field to grow to take up available space */
+  width: 0; /* Set width to 0, allowing flex-grow to control its width */
+  border-radius: 20px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light border */
+  font-size: 16px; /* Font size */
+  background-color: #858484; /* Light background */
+  outline: none; /* Remove outline */
+  height: 35px; /* Set a fixed height for the input */
+  box-sizing: border-box; /* Include padding and borders in the height */
+}
+
+/* Sort Button */
+.sort-button {
+  background-color: gray; /* Gray background */
+  width: auto; /* Let the width adjust based on the content */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded edges */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size */
+  margin-left: 10px; /* Space between the search bar and sort button */
+  height: 35px; /* Set the same height as the input */
+  box-sizing: border-box; /* Include padding and borders in the height */
+}
+
+.sort-button:hover {
+  background-color: rgb(99, 98, 98); /* Darker gray on hover */
+}
+
+/* Search Icon (Magnifying Glass) */
+.search-icon {
+  width: 20px; /* Icon size */
+  height: 20px; /* Maintain aspect ratio */
+  margin-right: 30px; /* Pull icon to the right side of the input */
+  cursor: pointer; /* Show pointer cursor on hover */
+  z-index: 5;
+}
+
+/*------------------ADD GAME PROMPT SECTION------------------*/
+.add-game-prompt {
+  margin-top: 20px; /* Space between favorites and the new prompt */
+  text-align: center; /* Center the text */
+  font-size: 16px; /* Adjust font size */
+  color: white; /* Text color */
+}
+
+.add-game-prompt a {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+.add-game-prompt a:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/*--------------------For Add Game Page--------------------*/
+.buttonimg {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+  color: white;
+}
+
+.button_addgame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.replybutton {
+  background-color: #6d04aa;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: auto;
+  color: white;
+}
+
+.Replying {
+  margin-left: 10%;
+  width: 90%;
+  height: auto;
+  display: table;
+  padding: 10px;
+  vertical-align: middle;
+  color: white;
+}
+
+#voting {
+  width: 10%;
+  height: 100%;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 12px;
+  padding-left: 250px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.upvote {
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+.downvote {
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.white-text {
+  color: white;
+}
+
+.Review {
+  color: white;
+}
+
+.ReplyingComment {
+  color: white;
+}
+
+.plus-icon-diff {
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
+}
+::placeholder {
+  color: white;
+}
