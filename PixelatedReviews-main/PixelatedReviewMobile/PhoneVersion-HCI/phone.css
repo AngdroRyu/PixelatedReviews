@@ -517,6 +517,7 @@ button:hover {
 }
 
 .button_addgame {
+  background-color: #6d04aa;
   display: flex;
   justify-content: center;
   align-items: center;
